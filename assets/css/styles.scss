@@ -1,0 +1,711 @@
+$PrimaryColor: #ed6f2e;
+$SecundColor: #454545;
+$ButtonColor: #eb4826;
+$BorderColor: #707070;
+$FooterColor: #171717;
+$WhiteColor: #efebe5;
+$TextColor: #393937;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: 0;
+}
+
+//Sidbar
+
+header {
+	.navbar {
+		padding: 0;
+		margin: 0;
+		box-sizing: 0;
+		.nav-link {
+			color: $PrimaryColor;
+		}
+	}
+	.container-fluid {
+		padding: 0;
+		margin: 0;
+		box-sizing: 0;
+	}
+}
+
+.logo {
+	background-color: #000000;
+	height: 76px;
+	width: 20%;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+
+	img {
+		margin-top: 5px;
+	}
+	.brand-mobile {
+		display: none;
+	}
+}
+#divBusca {
+	width: 60%;
+	padding: 0 20px;
+	background: #000000b4;
+	opacity: 0.8;
+	backdrop-filter: blur(20px);
+	display: flex;
+	gap: 20px;
+
+	input {
+		flex-grow: 1;
+		// width: 500px;
+		height: 76px;
+		border: none;
+		outline: none;
+		background: none;
+		color: white;
+	}
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 20%;
+	background-color: #000000;
+	height: 76px;
+	align-self: center;
+
+	button {
+		margin-top: 15px;
+		.navbar-toggler-icon {
+			.menu {
+				width: 100%;
+			}
+			.menu-mobile {
+				display: none;
+			}
+		}
+	}
+}
+
+//banner
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+.banner-image {
+	position: relative;
+	background-image: url(../img/Banner.png);
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	.container {
+		z-index: 5;
+		position: relative;
+		.col-md-4 {
+			margin-top: 50px;
+		}
+	}
+
+	.col-md-8 {
+		align-self: center;
+		color: $WhiteColor;
+		//  padding-left: 100px;
+
+		.main-title {
+			margin: 50px 0;
+			.btn_1 {
+				display: none;
+			}
+		}
+
+		h1 {
+			font-size: 45px;
+			font-weight: 700;
+		}
+		h4 {
+			font-size: 18px;
+		}
+		h2 {
+			font-size: 44px;
+			font-weight: 700;
+		}
+	}
+}
+
+.banner-image:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	background: linear-gradient(90deg, #000, #252525);
+}
+
+.Form {
+	position: relative;
+	background-color: $PrimaryColor;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 384px;
+	height: 564px;
+	padding: 52px;
+	margin-bottom: 40px;
+	opacity: 0.9;
+
+	.close-form-mobile {
+		display: none;
+	}
+
+	h3 {
+		margin-top: 12%;
+		font-size: 28px;
+		color: #fff;
+		font-weight: 700;
+	}
+
+	h6 {
+		width: 250px;
+		color: #fff;
+		font-size: 16px;
+		font-weight: 400;
+		margin-bottom: 30px;
+	}
+
+	form{
+		max-width: 305px;
+		width: 100%;
+	}
+
+	input {
+		width: 100%;
+		height: 34px;
+		background: $WhiteColor;
+		border: none;
+		padding-left: 15px;
+	}
+	#form {
+		margin-bottom: 10px;
+	}
+
+	button {
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		align-items: center;
+		background-color: $WhiteColor;
+		color: #171717;
+		font-weight: 600;
+		border: none;
+		height: 40px;
+		width: 100%;
+		margin-top: 10px;
+
+		&:hover {
+			border: 1px solid $WhiteColor;
+			background-color: $ButtonColor;
+		}
+	}
+}
+
+//margi
+
+.Caixa {
+	background-color: #ecf2f2;
+	margin-top: 50px;
+	width: 100%;
+
+	.row {
+		background-color: #ecf2f2;
+		.col:nth-child(1) {
+			object-fit: cover;
+			padding: 0;
+			img {
+				height: 100%;
+			}
+		}
+		.col:nth-child(2) {
+			padding: 50px 20px;
+		}
+	}
+
+	.Buttons {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 20px;
+		align-items: center;
+		align-content: center;
+		color: #fff;
+		font-size: 14px;
+		font-weight: 400px;
+
+		.Button {
+			display: flex;
+			flex-direction: row;
+			background-color: $PrimaryColor;
+			padding: 5px 25px 5px 25px;
+			cursor: pointer;
+
+			img {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	h2 {
+		margin-top: 30px;
+	}
+	p {
+		margin-top: 20px;
+	}
+
+	.btn-Equipe {
+		align-items: flex-end;
+		align-items: flex-end;
+		display: flex;
+		flex-direction: column;
+
+		button {
+			background-color: $ButtonColor;
+			color: $WhiteColor;
+			border: none;
+			padding: 8px 50px 8px 40px;
+			font-size: 14px;
+			font-weight: 600;
+
+			&:hover {
+				background-color: $PrimaryColor;
+			}
+			img {
+				padding-right: 10px;
+				margin-bottom: 3px;
+			}
+		}
+	}
+}
+.service {
+	margin-top: 100px;
+	width: 100%;
+
+	.inform {
+		padding: 50px;
+		padding-left: 100px;
+		h2 {
+			font-weight: bold;
+			font-size: 3em;
+			max-width: 400px;
+			margin-bottom: 50px;
+			color: $TextColor;
+		}
+		h3 {
+			color: $WhiteColor;
+			width: 0;
+		}
+
+		.col-6 {
+			padding: 0px;
+		}
+
+		.coluna {
+			display: flex;
+			flex-direction: row;
+			gap: 20px;
+			margin: 50px 0;
+			.wrapper {
+				display: flex;
+				align-items: flex-start;
+			}
+			img {
+				min-height: 50px;
+				min-width: 50px;
+				margin-right: 20px;
+			}
+			h4 {
+				font-size: 1.3em;
+				color: $TextColor;
+			}
+			p {
+				font-size: 1em;
+				color: $TextColor;
+				opacity: 0.6;
+			}
+		}
+		button {
+			margin-top: 150px;
+			outline: none;
+			border: none;
+			padding: 10px 20px;
+			background: $SecundColor;
+			color: white;
+			font-weight: bold;
+		}
+		button:hover {
+			cursor: pointer;
+			background: $ButtonColor;
+			border: 1px solid $WhiteColor;
+		}
+	}
+	.accordion {
+		background-color: $SecundColor;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		flex-direction: column;
+		align-items: center;
+		margin: 0;
+		padding: 50px 0;
+		width: 100%;
+		h3 {
+			font-weight: bold;
+			font-size: 3em;
+			color: white;
+		}
+		.card {
+			width: 600px;
+		}
+	}
+	.btn-primary {
+		align-items: center;
+	}
+
+	.row {
+		margin: 0;
+		padding: 0;
+		background: $PrimaryColor;
+		.col-6 {
+			padding: 0;
+		}
+	}
+	.carousel {
+		margin: 50px 0;
+		.carousel-item button {
+			position: relative;
+			border: 2px solid $ButtonColor;
+			border-radius: 0;
+			color: white;
+			font-weight: bold;
+		}
+		.carousel-item button:hover {
+			background: $ButtonColor;
+		}
+		.carousel-item button[aria-expanded="true"] {
+			background: $ButtonColor;
+		}
+		.carousel-item button:after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			bottom: -20px;
+			width: 20px;
+			height: 20px;
+			background: $PrimaryColor;
+		}
+		.carousel-control-next {
+			position: absolute;
+			right: -2rem;
+		}
+	}
+}
+
+#agendarVisita {
+	background: $SecundColor;
+	padding-top: 2.9rem;
+	padding-bottom: 2.9rem;
+
+	h3 {
+		color: $PrimaryColor;
+		font-family: sans-serif;
+		font-weight: bold;
+		font-size: 3em;
+	}
+
+	p {
+		color: $WhiteColor;
+	}
+
+	.col-4 {
+		padding-top: 8rem;
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	button {
+		background: $PrimaryColor;
+		color: $WhiteColor;
+		border: none;
+		padding: 0.5rem;
+		font-size: 0.9rem;
+		flex-grow: 1;
+	}
+	button:last-child {
+		background: $ButtonColor;
+	}
+	button:hover {
+		cursor: pointer;
+		background: $ButtonColor;
+		border: 1px solid $WhiteColor;
+	}
+	button:last-child:hover {
+		background: $PrimaryColor;
+	}
+
+	h4 {
+		font-family: sans-serif;
+		font-weight: bold;
+		color: $WhiteColor;
+	}
+}
+
+#maps {
+	background: $FooterColor;
+}
+footer {
+	background: $FooterColor;
+	color: $WhiteColor;
+	padding: 50px 100px;
+	padding-bottom: 5rem;
+
+	.infos {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		gap: 100px;
+		opacity: 0.5;
+	}
+	.division-line {
+		width: 100%;
+		height: 1px;
+		margin: 50px 0;
+		background-color: rgba(255, 255, 255, 0.432);
+	}
+}
+
+@media (max-width: 1200px) {
+	.fundo .container .col-6.form-mobile-open {
+		display: block;
+		position: absolute;
+		width: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		z-index: 10;
+		.Form {
+			width: 95%;
+			height: 70vh;
+			opacity: 1;
+			padding: 50px 10px;
+		}
+	}
+	.Form .close-form-mobile {
+		position: absolute;
+		top: 1em;
+		right: 1em;
+		width: 2.5em;
+		height: 2.5em;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border: 2px solid $WhiteColor;
+		border-radius: 10px;
+		color: white;
+		font-weight: bolder;
+	}
+	.sidebar {
+		button .navbar-toggler-icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.menu {
+				display: none;
+			}
+			.menu-mobile {
+				height: 100%;
+				display: block;
+			}
+		}
+	}
+	.fundo {
+		.container {
+			margin: 50px auto;
+			.col-md-8 {
+				width: 100%;
+				height: 80vh;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				.main-title:nth-child(2) {
+					margin-top: auto;
+					margin-bottom: 0;
+				}
+				.main-title:last-child {
+					h5 {
+						font-weight: lighter;
+					}
+					h3 {
+						font-weight: bolder;
+					}
+					.btn_1 {
+						display: block;
+						font-weight: bold;
+						font-size: 2em;
+						background: $PrimaryColor;
+						padding: 10px 20px;
+						p {
+							margin: 0;
+						}
+					}
+					.btn_1:hover {
+						cursor: pointer;
+						background: $ButtonColor;
+						border: 1px solid $WhiteColor;
+					}
+				}
+			}
+			.col-6 {
+				display: none;
+			}
+		}
+	}
+	#agendarVisita {
+		.row {
+			flex-direction: column;
+			width: 90%;
+			margin: 0 auto;
+			.col-8 {
+				width: 100%;
+			}
+			.col-4 {
+				width: 100%;
+				padding: 0;
+				gap: 20px;
+				flex-wrap: wrap;
+				button {
+					min-width: max-content;
+				}
+			}
+		}
+	}
+	.Caixa {
+		.row {
+			.col {
+				h2,
+				p {
+					width: 80%;
+				}
+				.btn-Equipe {
+					width: 80%;
+				}
+			}
+			.col > img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.Caixa {
+		background: none;
+		.Buttons {
+			justify-content: center;
+		}
+		.row {
+			flex-direction: column;
+			.col {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+		.btn-Equipe {
+			align-items: unset;
+		}
+	}
+	.service {
+		.row {
+			flex-direction: column-reverse;
+			.col-6 {
+				width: 100%;
+			}
+		}
+		.coluna {
+			// flex-wrap: wrap;
+			.wrapper {
+				min-width: 100px;
+			}
+		}
+	}
+	.logo {
+		.navbar-brand {
+			display: none;
+		}
+		.navbar-brand.brand-mobile {
+			display: block;
+			height: 100%;
+			img {
+				height: 80%;
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.service {
+		.inform {
+			padding: 50px;
+			button {
+				margin: 50px auto;
+				width: 100%;
+			}
+			.coluna {
+				flex-wrap: wrap;
+				margin: 0;
+			}
+		}
+
+		.accordion .card {
+			width: 60vw;
+		}
+	}
+	#txtBusca::placeholder {
+		color: transparent;
+	}
+	footer {
+		padding: 50px 5%;
+		.infos {
+			gap: 20px;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.btn_1 {
+		background-color: #ccc;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 80%;
+		height: unset;
+		margin: 0 auto;
+		p {
+			text-align: center;
+			color: $WhiteColor;
+		}
+	}
+}
